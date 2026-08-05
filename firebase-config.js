@@ -6,13 +6,23 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebas
 
 /* ============ PASTE YOUR FIREBASE CONFIG BELOW ============ */
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+
+  apiKey: "AIzaSyD_ha2S7AcZHH_zNCruVc9cYpC3hrfDA4Y",
+
+  authDomain: "shopmanage-c77a1.firebaseapp.com",
+
+  projectId: "shopmanage-c77a1",
+
+  storageBucket: "shopmanage-c77a1.firebasestorage.app",
+
+  messagingSenderId: "830639386929",
+
+  appId: "1:830639386929:web:0e142acfe30fc1bbe88010",
+
+  measurementId: "G-MXTM2LKCDT"
+
 };
+
 /* ============================================================ */
 
 export const app = initializeApp(firebaseConfig);
