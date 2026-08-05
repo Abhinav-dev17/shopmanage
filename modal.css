@@ -1,0 +1,21 @@
+.overlay{
+  position:fixed;inset:0;
+  background:rgba(15,27,45,0.5);
+  display:flex;align-items:flex-end;justify-content:center;
+  z-index:100;
+}
+@media (min-width:640px){
+  .overlay{align-items:center;}
+}
+.modal-sheet{
+  background:#fff;width:100%;max-width:460px;
+  border-radius:18px 18px 0 0;
+  padding:22px 22px 28px;
+  max-height:88vh;overflow-y:auto;
+}
+@media (min-width:640px){
+  .modal-sheet{border-radius:16px;}
+}
+.modal-sheet h3{font-size:17px;margin-bottom:14px;}
+.modal-actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
+.modal-actions .btn{flex:1;min-width:120px;}

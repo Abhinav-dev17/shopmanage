@@ -1,0 +1,22 @@
+.field{margin-bottom:12px;}
+.field label{
+  display:block;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.4px;color:var(--text-light);margin-bottom:5px;
+}
+.field input, .field select{
+  width:100%;padding:10px 11px;border-radius:9px;border:1px solid var(--border);
+  background:#fff;font-family:'Inter',sans-serif;font-size:14px;color:var(--text);
+}
+.field input:focus, .field select:focus{outline:2px solid var(--royal);outline-offset:1px;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+
+.receipt{padding:4px 2px;}
+.receipt-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--border);font-size:13px;}
+.receipt-row:last-child{border-bottom:none;}
+
+@media print{
+  body *{visibility:hidden;}
+  .receipt, .receipt *{visibility:visible;}
+  .receipt{position:absolute;top:0;left:0;width:100%;}
+}

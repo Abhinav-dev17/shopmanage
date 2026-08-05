@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shops — PropertyManager</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <aside class="sidebar" id="navPlaceholder"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Shops</h1>
+      <button class="btn btn-primary" id="addShopBtn">+ Add shop</button>
+    </div>
+    <div class="filter-bar">
+      <select id="filterBuilding"><option value="">All buildings</option></select>
+      <select id="filterStatus">
+        <option value="">All statuses</option>
+        <option value="Vacant">Vacant</option>
+        <option value="Occupied">Occupied</option>
+        <option value="Under Work">Under Work</option>
+      </select>
+    </div>
+    <div id="shopsList"></div>
+  </main>
+  <nav class="bottom-nav" id="bottomNavPlaceholder"></nav>
+  <script type="module" src="js/shops.js"></script>
+</body>
+</html>

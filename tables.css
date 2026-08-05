@@ -1,0 +1,26 @@
+.data-table{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  font-size:13px;
+}
+.data-table th{
+  text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:0.5px;
+  color:var(--text-light);padding:10px 12px;border-bottom:1px solid var(--border);
+  background:#FAFBFD;
+}
+.data-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.data-table tr:last-child td{border-bottom:none;}
+.row-actions{display:flex;gap:6px;flex-wrap:wrap;}
+
+.status-pill{
+  font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;
+  padding:4px 9px;border-radius:20px;
+}
+.status-vacant, .status-pending{background:var(--orange-bg);color:var(--orange);}
+.status-occupied, .status-paid{background:var(--green-bg);color:var(--green);}
+.status-under-work, .status-partial{background:#eef1f7;color:var(--text-light);}
+.status-overdue{background:var(--red-bg);color:var(--red);}
