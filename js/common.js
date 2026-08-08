@@ -23,6 +23,9 @@ export const PAGE_ACCESS = {
   shops:     ['superowner', 'owner'],
   tenants:   ['superowner', 'owner', 'manager'],
   rent:      ['superowner', 'owner', 'manager', 'accountant'],
+  works:     ['superowner', 'owner', 'manager'],
+  expenses:  ['superowner', 'owner', 'manager', 'accountant'],
+  reports:   ['superowner', 'owner', 'accountant'],
   staff:     ['superowner']
 };
 
@@ -32,6 +35,9 @@ const NAV_ITEMS = [
   { key: 'shops',     label: 'Shops',     href: 'shops.html',     icon: '\u25A3' },
   { key: 'tenants',   label: 'Tenants',   href: 'tenants.html',   icon: '\u25CF' },
   { key: 'rent',      label: 'Rent',      href: 'rent.html',      icon: '\u20B9' },
+  { key: 'works',     label: 'Works',     href: 'works.html',     icon: '\u2692' },
+  { key: 'expenses',  label: 'Expenses',  href: 'expenses.html',  icon: '\u2707' },
+  { key: 'reports',   label: 'Reports',   href: 'reports.html',   icon: '\u25A4' },
   { key: 'staff',     label: 'Staff',     href: 'staff.html',     icon: '\u2699' }
 ];
 
