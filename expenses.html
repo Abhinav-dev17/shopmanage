@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expenses — PropertyManager</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <aside class="sidebar" id="navPlaceholder"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Expenses</h1>
+      <button class="btn btn-primary" id="addExpenseBtn">+ Add expense</button>
+    </div>
+    <div class="filter-bar">
+      <select id="filterBuilding"><option value="">All buildings</option></select>
+    </div>
+    <div id="expensesList"></div>
+  </main>
+  <nav class="bottom-nav" id="bottomNavPlaceholder"></nav>
+  <script type="module" src="js/expenses.js"></script>
+</body>
+</html>
