@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports — PropertyManager</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <aside class="sidebar" id="navPlaceholder"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Reports</h1>
+    </div>
+    <div class="filter-bar">
+      <select id="rangeSelect">
+        <option value="today">Today</option>
+        <option value="yesterday">Yesterday</option>
+        <option value="week">This Week</option>
+        <option value="month" selected>This Month</option>
+        <option value="year">This Year</option>
+        <option value="custom">Custom Range</option>
+      </select>
+      <input type="date" id="customFrom" style="display:none;">
+      <input type="date" id="customTo" style="display:none;">
+    </div>
+    <div class="stat-grid" id="reportStats" style="margin-bottom:24px;"></div>
+
+    <div class="page-header"><h2>Rent Collection</h2><button class="btn btn-ghost btn-sm" id="exportRentBtn">Export CSV</button></div>
+    <div id="rentReportTable"></div>
+
+    <div class="page-header" style="margin-top:24px;"><h2>Expenses</h2><button class="btn btn-ghost btn-sm" id="exportExpenseBtn">Export CSV</button></div>
+    <div id="expenseReportTable"></div>
+
+    <div class="page-header" style="margin-top:24px;"><h2>Occupancy</h2></div>
+    <div id="occupancyReport"></div>
+  </main>
+  <nav class="bottom-nav" id="bottomNavPlaceholder"></nav>
+  <script type="module" src="js/reports.js"></script>
+</body>
+</html>
