@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Works & Maintenance — PropertyManager</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <aside class="sidebar" id="navPlaceholder"></aside>
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Works &amp; Maintenance</h1>
+      <button class="btn btn-primary" id="addWorkBtn">+ Add work</button>
+    </div>
+    <div class="filter-bar">
+      <select id="filterBuilding"><option value="">All buildings</option></select>
+      <select id="filterStatus">
+        <option value="">All statuses</option>
+        <option value="Planned">Planned</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+    </div>
+    <div id="worksList"></div>
+  </main>
+  <nav class="bottom-nav" id="bottomNavPlaceholder"></nav>
+  <script type="module" src="js/works.js"></script>
+</body>
+</html>
