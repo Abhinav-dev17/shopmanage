@@ -8,6 +8,7 @@ import { requireAuth, escapeHtml, showToast, openModal, closeModal, fmtMoney, fm
 
 let currentUser = null;
 let tenants = [];
+let shops = [];
 let rentPayments = [];
 let filters = { status: '' };
 
@@ -23,6 +24,9 @@ const MONTHS = ['January','February','March','April','May','June','July','August
   onSnapshot(query(collection(db, 'tenants'), orderBy('name')), snap => {
     tenants = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(t => t.status !== 'History');
     render();
+  });
+  onSnapshot(collection(db, 'shops'), snap => {
+    shops = snap.docs.map(d => ({ id: d.id, ...d.data() }));
   });
   onSnapshot(query(collection(db, 'rentPayments'), orderBy('createdAt', 'desc')), snap => {
     rentPayments = snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -178,6 +182,8 @@ function collectRentForm() {
   const tenantSel = document.getElementById('f-tenant');
   const tenantId = tenantSel.value;
   const tenantNameVal = tenantSel.selectedOptions[0].textContent;
+  const tenantObj = tenants.find(t => t.id === tenantId);
+  const shopObj = tenantObj ? shops.find(s => s.id === tenantObj.shopId) : null;
   const monthIdx = parseInt(document.getElementById('f-month').value);
   const year = parseInt(document.getElementById('f-year').value);
   const amount = parseFloat(document.getElementById('f-amount').value) || 0;
@@ -185,6 +191,8 @@ function collectRentForm() {
   if (!tenantId || !amount) { showToast('Select a tenant and enter an amount'); return null; }
   return {
     tenantId, tenantName: tenantNameVal,
+    shopId: tenantObj ? tenantObj.shopId || null : null,
+    buildingId: shopObj ? shopObj.buildingId || null : null,
     monthKey: `${year}-${String(monthIdx + 1).padStart(2, '0')}`,
     monthLabel: `${MONTHS[monthIdx]} ${year}`,
     amount, paidAmount,
